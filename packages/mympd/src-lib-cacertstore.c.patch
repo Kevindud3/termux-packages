@@ -1,0 +1,14 @@
+--- a/src/lib/cacertstore.c
++++ b/src/lib/cacertstore.c
+@@ -20,7 +20,7 @@
+ const char *check_ca_cert_paths[] = {
+-    "/etc/ssl/certs/ca-certificates.crt",
+-    "/etc/ssl/certs/ca-bundle.crt",
+-    "/etc/pki/tls/certs/ca-bundle.crt",
+-    "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem",
++    "@TERMUX_PREFIX@/usr/etc/tls/cert.pem",
++    "@TERMUX_PREFIX@/etc/tls/cert.pem",
++    "@TERMUX_PREFIX@/usr/etc/ssl/certs/cert.pem",
++    "@TERMUX_PREFIX@/etc/ssl/certs/cert.pem",
+      NULL
+ };
